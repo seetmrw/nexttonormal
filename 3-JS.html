@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <title>JavaScript - 귀여운 펭귄을 봐주세요</title>
+<meta charset="utf-8">
+<script>
+  var Links = {
+    setColor:function(color){
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i<alist.length){
+        alist[i].style.color= color;
+        i = i + 1;
+        }
+    }
+  }
+  var Body = {
+    setColor:function(color){
+      document.querySelector('body').style.color = color;
+    },
+    setBackgroundColor:function(color){
+      document.querySelector('body').style.backgroundColor = color;
+    }
+  }
+  function nightDayHandler(self){
+    var target = document.querySelector('body')
+      if(self.value === 'night'){
+      Body.setBackgroundColor('black');
+      Body.setColor('white');
+      self.value = 'day';
+      Links.setColor('powderblue');
+      }else{
+      Body.setBackgroundColor('white');
+      Body.setColor('black');
+      self.value = 'night';
+      Links.setColor('blue');
+      }
+  }
+</script>
+</head>
+
+<body>
+  <h1><a href="index-JS.html">WEB</a></h1>
+  <input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+  ">
+  <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+  ">
+  <input id="night_day" type="button" value="night" onclick="
+    nightDayHandler(this);
+  ">
+  <input id="night_day" type="button" value="night" onclick="
+    nightDayHandler(this);
+  ">
+  <ol>
+    <li><a href="1-JS.html">HTML</a></li>
+    <li><a href="2-JS.html">CSS</a></li>
+    <li><a href="3-JS.html">JavaScript</a></li>
+  </ol>
+
+  <h2>JavaScript</h2>
+
+  <p><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" title="JavaScript specification">JavaScript</a> often abbreviated JS,
+  is a programming language that is <strong>one of the <u>core technologies</u> of the World Wide Web</strong>, alongside HTML and CSS.
+  <br>As of 2022, 98% of websites use JavaScript on the client side for web page behavior, often incorporating third-party libraries.
+  <br>All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.</p>
+  <br><img src="penguin3.jpg" width="50%">
+  <p style="margin-top:40px;">JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard.
+  It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles.
+  It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM).</p>
+  <input type="button" value="night" onclick="
+    if(this.value === 'night'){
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    this.value = 'day';
+    }else{
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    this.value = 'night';
+    }
+  ">
+</body>
+</html>
